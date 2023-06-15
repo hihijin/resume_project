@@ -22,9 +22,6 @@ const SideBarWrap = styled.div`
     width: 200px;
     right: -70%;
   }
-  ul {
-    list-style: none;
-  }
   button {
     width: 100%;
     text-align: center;
@@ -40,7 +37,7 @@ const SideBarWrap = styled.div`
   }
 `;
 
-const Menu = styled.li`
+const Menu = styled.div`
   margin: 30px 8px;
   color: black;
   &:hover {
@@ -73,14 +70,12 @@ function Sidebar({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: any }) {
       <button onClick={toggleSide} onKeyDown={toggleSide}>
         닫기
       </button>
-      <ul>
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <Menu>Home</Menu>
-        </Link>
-        <Link to="/project" style={{ textDecoration: "none" }}>
-          <Menu>✈️너의 MBTI는</Menu>
-        </Link>
-      </ul>
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <Menu>Home</Menu>
+      </Link>
+      <Link to="/project" style={{ textDecoration: "none" }}>
+        <Menu>✈️너의 MBTI는</Menu>
+      </Link>
     </SideBarWrap>
   );
 }

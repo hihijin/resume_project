@@ -35,7 +35,7 @@ function Header() {
     <Main>
       <div>👩‍💻 Dev Heejin</div>
       <div>
-        <button onClick={toggleSide}>
+        <button onClick={toggleSide} aria-label="list">
           <RxHamburgerMenu size="20px" />
         </button>
         <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />

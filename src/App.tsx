@@ -4,6 +4,7 @@ import { lazy, Suspense } from "react";
 
 import { Route, Routes } from "react-router-dom";
 
+import ChannelTalk from "./components/ChannelTalk";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Loading from "./pages/Loading";
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<MainPage />} />
         </Routes>
       </Suspense>
+      <ChannelTalk />
       <Footer />
     </div>
   );

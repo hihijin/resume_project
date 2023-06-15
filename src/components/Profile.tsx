@@ -66,16 +66,16 @@ const Section2 = styled.div`
   .picture {
     border-radius: 50%;
     width: 230px;
-    height: 200px;
+    height: auto;
     margin-right: 100px;
     @media (max-width: 740px) {
       width: 200px;
-      height: 170px;
+      height: auto;
       margin-right: 60px;
     }
     @media (max-width: 651px) {
       width: 180px;
-      height: 150px;
+      height: auto;
       margin-right: 30px;
     }
   }
@@ -155,7 +155,7 @@ function Profile() {
       </Section1>
       <Section2>
         <div>
-          <img className="picture" src={picture} alt="" />
+          <img className="picture" src={picture} alt="profile" />
         </div>
         <Section3>
           <div className="subject">Contact</div>
@@ -172,7 +172,11 @@ function Profile() {
               <button onClick={mailShowHander}>bda624444@gmail.com</button>
               <button
                 onClick={() =>
-                  window.open("https://github.com/hihijin", "_blank")
+                  window.open(
+                    "https://github.com/hihijin",
+                    "_blank",
+                    "noreferrer noopener"
+                  )
                 }
               >
                 https://github.com/hihijin

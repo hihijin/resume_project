@@ -16,6 +16,7 @@ const Main = styled.div`
   }
   img {
     width: 150px;
+    height: auto;
     margin: 5px 0;
     &:hover {
       cursor: pointer;
@@ -70,7 +71,7 @@ function Experience() {
         onClick={() => window.open("https://whatsyourmbti.click", "_blank")}
         className="logo"
         src={logo}
-        alt=""
+        alt="로고"
       />
       <div
         onClick={() => window.open("https://whatsyourmbti.click", "_blank")}

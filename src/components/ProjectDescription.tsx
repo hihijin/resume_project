@@ -10,6 +10,7 @@ const Main = styled.div`
   margin: 50px 0;
   img {
     width: 200px;
+    height: auto;
     margin: 10px 0;
     &:hover {
       cursor: pointer;
@@ -48,6 +49,7 @@ const Main = styled.div`
   }
   .feedback {
     width: 600px;
+    height: auto;
     margin-bottom: 100px;
     @media (max-width: 645px) {
       width: 500px;
@@ -67,11 +69,17 @@ const Main = styled.div`
 function ProjectDescription() {
   return (
     <Main>
-      <img className="logo" src={logo} alt="" />
+      <img className="logo" src={logo} alt="logo" />
       <div className="subTitle">🔗프로젝트 관련 링크</div>
       <button
         className="text link"
-        onClick={() => window.open("https://whatsyourmbti.click", "_blank")}
+        onClick={() =>
+          window.open(
+            "https://whatsyourmbti.click",
+            "_blank",
+            "noreferrer noopener"
+          )
+        }
       >
         https://whatsyourmbti.click
       </button>
@@ -79,7 +87,8 @@ function ProjectDescription() {
         onClick={() =>
           window.open(
             "https://github.com/codestates-seb/seb43_main_023/tree/main",
-            "_blank"
+            "_blank",
+            "noreferrer noopener"
           )
         }
         className="text link"
@@ -90,7 +99,8 @@ function ProjectDescription() {
         onClick={() =>
           window.open(
             "https://velog.io/@hihijin/%EB%A9%94%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0",
-            "_blank"
+            "_blank",
+            "noreferrer noopener"
           )
         }
         className="text link"
@@ -142,7 +152,7 @@ function ProjectDescription() {
       <div className="text noborder">
         해당 프로젝트 종료 후 팀원분들이 작성해주신 피드백과 후기입니다.
       </div>
-      <img className="feedback" src={feedback} alt="" />
+      <img className="feedback" src={feedback} alt="feedback" />
     </Main>
   );
 }

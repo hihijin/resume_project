@@ -68,13 +68,17 @@ function Sidebar({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: any }) {
     setIsOpen(false);
   };
 
+  const linkHandler = (link: string) => {
+    navigate(link);
+    window.location.reload();
+  };
   return (
     <SideBarWrap id="sidebar" ref={outside} className={isOpen ? "open" : ""}>
       <button onClick={toggleSide} onKeyDown={toggleSide}>
         닫기
       </button>
-      <Menu onClick={() => navigate("/")}>Home</Menu>
-      <Menu onClick={() => navigate("/project")}>✈️너의 MBTI는</Menu>
+      <Menu onClick={() => linkHandler("/")}>Home</Menu>
+      <Menu onClick={() => linkHandler("/project")}>✈️너의 MBTI는</Menu>
     </SideBarWrap>
   );
 }

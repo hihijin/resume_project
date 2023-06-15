@@ -20,7 +20,7 @@ function Footer() {
     <Main>
       <div>
         본 페이지는 상업적 목적이 아닌 비영리적 개인 포트폴리오용으로 만들어진
-        사이트입니다. heehin Park ⓒ 2023
+        사이트입니다. heejin Park ⓒ 2023
       </div>
     </Main>
   );

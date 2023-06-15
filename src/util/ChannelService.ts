@@ -81,7 +81,7 @@ class ChannelService {
     (function () {
       var w = window;
       if (w.ChannelIO) {
-        return w.console.error("ChannelIO script included twice.");
+        console.log("ChannelIO script included twice.");
       }
       var ch: any = function () {
         ch.c(arguments);

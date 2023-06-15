@@ -6,6 +6,8 @@ import styled from "styled-components";
 
 import emailjs from "@emailjs/browser";
 
+import ToastAlert from "../util/ToastAlert";
+
 const Main = styled.div`
   position: fixed;
   bottom: 50px;
@@ -53,6 +55,7 @@ const Main = styled.div`
       border-radius: 5px;
       padding: 5px;
       box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+      font-weight: bold;
       &:hover {
         background: #ececec;
       }
@@ -60,7 +63,7 @@ const Main = styled.div`
   }
 `;
 
-const Section = styled.div`
+const Section1 = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -79,6 +82,25 @@ const Section = styled.div`
   }
 `;
 
+const Section2 = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5px;
+  input {
+    width: 150px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    margin-left: 5px;
+    border-bottom: 3px solid white;
+    background: none;
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+`;
 interface Imail {
   setMailShow: (x: boolean) => void;
 }
@@ -94,6 +116,8 @@ export default function Mail(props: Imail) {
       "W-lHD0EqTsVZzY_31"
     );
     (e.target as HTMLFormElement).message.value = "";
+    props.setMailShow(false);
+    ToastAlert("메일 전송을 성공하였습니다");
   };
 
   const mailCloseHandler = () => {
@@ -103,13 +127,17 @@ export default function Mail(props: Imail) {
   return (
     <Main>
       <form id="contact-form" ref={form} onSubmit={(e) => sendEmail(e)}>
-        <Section>
+        <Section1>
           <div />
           <label>메일보내기</label>
           <button className="closeBtn" onClick={mailCloseHandler}>
             X
           </button>
-        </Section>
+        </Section1>
+        <Section2>
+          <label>Email</label>
+          <input placeholder="email" name="email" />
+        </Section2>
         <textarea name="message" />
         <button className="sendBtn" type="submit" value="Send">
           Send

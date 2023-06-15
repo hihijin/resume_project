@@ -1,6 +1,6 @@
-import "../App.css";
+import '../App.css';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Main = styled.div`
   width: 100%;
@@ -34,13 +34,11 @@ function Introduction() {
         효과가 날때마다 자기효능감이 높아져서 좋았는데 개발도 비슷한 매력에
         끌렸습니다.
         <br />
-        <br />
         평생동안 내가 배운 내 기술을 써먹고 계속 업그레이드할 수 있는 사람이
         되고 싶었기에 퇴사하고 개발자로 전향하게 되었습니다.
         <br />
-        <br />
-        무궁무진한 개발지식을 깊이, 다음 넓이로 기술을 하나씩 배워가며 평생 제
-        하드웨어를 업그레이드시키는 개발자가 되겠습니다.
+        무궁무진한 개발지식을 깊이, 다음 넓이로 하나씩 배워가며 평생 제 기술을
+        업그레이드시키는 개발자가 되겠습니다.
         <br />
         <br />
         지난 6개월간 부트캠프에서 공부하며 팀프로젝트 하나를 완성하였습니다.

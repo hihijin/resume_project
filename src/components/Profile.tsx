@@ -1,12 +1,12 @@
-import "../App.css";
+import '../App.css';
 
-import { useState } from "react";
+import { useState } from 'react';
 
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
-import picture from "../assets/picture.png";
-import Mail from "./Mail";
+import picture from '../assets/picture.png';
+import Mail from './Mail';
 
 const Main = styled.div`
   width: 100%;
@@ -195,7 +195,7 @@ function Profile() {
             <Answer>
               <span>AWS(S3, Route53, cloundfront), Netlify</span>
               <span>Typescript, Javascript, Styled-Component</span>
-              <span>Next.js, React, Redux</span>
+              <span>React, Redux</span>
               <span>Git, Github, Figma, Slack</span>
             </Answer>
           </Section4>

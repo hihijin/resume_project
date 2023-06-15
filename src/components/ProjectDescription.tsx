@@ -1,9 +1,9 @@
-import "../App.css";
+import '../App.css';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import feedback from "../assets/feedback.png";
-import logo from "../assets/logo.png";
+import feedback from '../assets/feedback.png';
+import logo from '../assets/logo.png';
 
 const Main = styled.div`
   width: 100%;
@@ -94,18 +94,6 @@ function ProjectDescription() {
         className="text link"
       >
         프로젝트 Github 링크
-      </button>
-      <button
-        onClick={() =>
-          window.open(
-            "https://velog.io/@hihijin/%EB%A9%94%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0",
-            "_blank",
-            "noreferrer noopener"
-          )
-        }
-        className="text link"
-      >
-        프로젝트 회고
       </button>
       <div className="subTitle">🪧프로젝트 설명</div>
       <div className="text">

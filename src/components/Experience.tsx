@@ -84,8 +84,8 @@ function Experience() {
       <div className="text">2023.04.28 ~ 2023.05.25</div>
       <div className="subTitle">사용한 기술 스택</div>
       <div className="text">
-        AWS(EC2, S3, RDS), React, javascript, typescript, Redux-toolkit, tour
-        api, kakaomap api, styled-component
+        AWS(S3, cloudFront, Route53), React, javascript, typescript, axios,
+        Redux-toolkit, tour api, kakaomap api, styled-component
       </div>
       <div className="subTitle">구현 기능</div>
       <ul>
@@ -95,13 +95,15 @@ function Experience() {
           Figma로 프로젝트 전반적인 디자인 및 레이아웃을 구성한 화면정의서
           구현(공통)
         </li>
-        <li>반응형 레이아웃 구현</li>
-        <li>redux-tookit으로 로그인유무와 유저정보를 전역상태로 구현</li>
         <li>회원가입, 로그인, oauth, 마이페이지 구현</li>
         <li>관리자페이지 구현</li>
-        <li>랜딩페이지 구현</li>
+        <li>랜딩페이지, 로딩페이지, 에러페이지, 헤더, 푸터 구현</li>
+        <li>반응형 레이아웃 구현</li>
+        <li>공통 API함수, util함수, hook 생성</li>
+        <li>redux-tookit으로 로그인유무와 유저정보를 전역상태로 구현</li>
+        <li>Lazy.loading 구현</li>
         <li>github 칸반, 마일스톤, 이슈 관리(공통)</li>
-        <li>AWS s3, cloudFront를 활용하여 https로 배포</li>
+        <li>AWS s3, cloudFront, Route53를 활용하여 https로 배포</li>
       </ul>
     </Main>
   );

@@ -189,7 +189,7 @@ function Profile() {
               <span>Tool</span>
             </Info>
             <Answer>
-              <span>AWS(S3, cloundfront), Netlify</span>
+              <span>AWS(S3, Route53, cloundfront), Netlify</span>
               <span>Typescript, Javascript, Styled-Component</span>
               <span>Next.js, React, Redux</span>
               <span>Git, Github, Figma, Slack</span>

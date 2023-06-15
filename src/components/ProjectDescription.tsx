@@ -95,6 +95,18 @@ function ProjectDescription() {
       >
         프로젝트 Github 링크
       </button>
+      <button
+        onClick={() =>
+          window.open(
+            "https://youtu.be/VOqiHb-n1bI",
+            "_blank",
+            "noreferrer noopener"
+          )
+        }
+        className="text link"
+      >
+        프로젝트 발표 링크
+      </button>
       <div className="subTitle">🪧프로젝트 설명</div>
       <div className="text">
         MBTI기반 여행지 추천&커뮤니티 서비스 입니다. <br />

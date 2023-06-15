@@ -1,6 +1,5 @@
 import "../App.css";
 
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import logo from "../assets/logo.png";
@@ -17,11 +16,14 @@ const Main = styled.div`
   }
   img {
     width: 150px;
-    margin: 10px 0;
+    margin: 5px 0;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .subTitle {
     font-weight: bold;
-    line-height: 250%;
+    line-height: 200%;
     margin: 10px 0;
     font-size: 17px;
     @media (max-width: 740px) {
@@ -30,8 +32,7 @@ const Main = styled.div`
   }
   .text,
   ul {
-    line-height: 250%;
-    margin: 10px 0;
+    line-height: 200%;
     color: black;
     @media (max-width: 740px) {
       font-size: 13px;
@@ -39,19 +40,21 @@ const Main = styled.div`
   }
   .text {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding-bottom: 10px;
+    padding-bottom: 7px;
   }
   .blue {
     &:hover {
+      cursor: pointer;
       color: #0db4f3;
     }
   }
   li {
-    margin: 7px 0;
+    margin: 5px 0;
     margin-left: 20px;
   }
   .gray {
     color: rgba(0, 0, 0, 0.5);
+    border: none;
   }
 `;
 
@@ -63,14 +66,18 @@ function Experience() {
         코드스테이츠 부트캠프 진행 중 저의 성장에 영향을 주었던 프로젝트를
         소개해드리겠습니다.
       </div>
-      <Link to="https://whatsyourmbti">
-        <img className="logo" src={logo} alt="" />
-      </Link>
-      <Link to="https://whatsyourmbti" style={{ textDecoration: "none" }}>
-        <div className="text blue">
-          ✈️MBTI기반 여행지 추천&커뮤니티 어플리케이션
-        </div>
-      </Link>
+      <img
+        onClick={() => window.open("https://whatsyourmbti.click", "_blank")}
+        className="logo"
+        src={logo}
+        alt=""
+      />
+      <div
+        onClick={() => window.open("https://whatsyourmbti.click", "_blank")}
+        className="text blue"
+      >
+        ✈️MBTI기반 여행지 추천&커뮤니티 어플리케이션
+      </div>
       <div className="subTitle">팀 프로젝트</div>
       <div className="text">프론트엔드 개발자 3명, 백엔드 개발자 3명</div>
       <div className="subTitle">프로젝트 기간</div>

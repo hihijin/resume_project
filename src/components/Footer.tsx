@@ -1,6 +1,6 @@
-import '../App.css';
+import "../App.css";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Main = styled.div`
   margin-bottom: 20px;
@@ -9,6 +9,9 @@ const Main = styled.div`
     color: #0db4f3;
     font-size: 11px;
     font-style: italic;
+    @media (max-width: 569px) {
+      font-size: 10px;
+    }
   }
 `;
 

@@ -16,7 +16,7 @@ const Main = styled.div`
 `;
 
 const Content = styled.div`
-  width: 70%;
+  width: 850px;
   display: flex;
   justify-content: flex-start;
   align-items: center;

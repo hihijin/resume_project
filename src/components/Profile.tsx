@@ -60,12 +60,12 @@ const Section2 = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (max-width: 540px) {
+  @media (max-width: 565px) {
     flex-direction: column;
   }
   .picture {
     border-radius: 50%;
-    width: 250px;
+    width: 230px;
     height: 200px;
     margin-right: 100px;
     @media (max-width: 740px) {
@@ -73,7 +73,7 @@ const Section2 = styled.div`
       height: 170px;
       margin-right: 60px;
     }
-    @media (max-width: 540px) {
+    @media (max-width: 651px) {
       width: 180px;
       height: 150px;
       margin-right: 30px;
@@ -108,14 +108,17 @@ const Info = styled.div`
   align-items: flex-start;
   flex-direction: column;
   span {
-    height: 30px;
     font-weight: bold;
-    font-size: 15px;
-    width: 130px;
-    margin-bottom: 15px;
-    @media (max-width: 740px) {
-      width: 100px;
-      font-size: 14px;
+    font-size: 14px;
+    width: 100px;
+    margin-bottom: 10px;
+    @media (max-width: 651px) {
+      width: 70px;
+    }
+  }
+  .Language {
+    @media (max-width: 346px) {
+      height: 38px;
     }
   }
 `;
@@ -126,13 +129,9 @@ const Answer = styled.div`
   flex-direction: column;
   span,
   button {
-    height: 30px;
     color: rgba(0, 0, 0, 0.6);
-    font-size: 15px;
-    margin-bottom: 15px;
-    @media (max-width: 740px) {
-      font-size: 14px;
-    }
+    font-size: 14px;
+    margin-bottom: 10px;
   }
   button {
     &:hover {
@@ -171,13 +170,13 @@ function Profile() {
                 <button>010-2470-7057</button>
               </Link>
               <button onClick={mailShowHander}>bda624444@gmail.com</button>
-
-              <Link
-                to="https://github.com/hihijin"
-                style={{ textDecoration: "none" }}
+              <button
+                onClick={() =>
+                  window.open("https://github.com/hihijin", "_blank")
+                }
               >
-                <button>https://github.com/hihijin</button>
-              </Link>
+                https://github.com/hihijin
+              </button>
             </Answer>
           </Section4>
           <div className="subject">Skill</div>
@@ -185,12 +184,8 @@ function Profile() {
           <Section4>
             <Info>
               <span>Deploy</span>
-              <span>Language</span>
-              <span>
-                Library/
-                <br />
-                Framework
-              </span>
+              <span className="Language">Language</span>
+              <span>Library</span>
               <span>Tool</span>
             </Info>
             <Answer>

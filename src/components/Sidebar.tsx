@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const SideBarWrap = styled.div`
@@ -40,12 +40,15 @@ const SideBarWrap = styled.div`
 const Menu = styled.div`
   margin: 30px 8px;
   color: black;
+  width: 100%;
   &:hover {
+    cursor: pointer;
     color: #0db4f3;
   }
 `;
 
 function Sidebar({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: any }) {
+  const navigate = useNavigate();
   const outside = useRef<any>();
 
   useEffect(() => {
@@ -70,12 +73,8 @@ function Sidebar({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: any }) {
       <button onClick={toggleSide} onKeyDown={toggleSide}>
         닫기
       </button>
-      <Link to="/" style={{ textDecoration: "none" }}>
-        <Menu>Home</Menu>
-      </Link>
-      <Link to="/project" style={{ textDecoration: "none" }}>
-        <Menu>✈️너의 MBTI는</Menu>
-      </Link>
+      <Menu onClick={() => navigate("/")}>Home</Menu>
+      <Menu onClick={() => navigate("/project")}>✈️너의 MBTI는</Menu>
     </SideBarWrap>
   );
 }

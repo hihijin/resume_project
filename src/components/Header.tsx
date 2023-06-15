@@ -1,6 +1,11 @@
 import "../App.css";
 
+import { useState } from "react";
+
+import { RxHamburgerMenu } from "react-icons/rx";
 import styled from "styled-components";
+
+import Sidebar from "./Sidebar";
 
 const Main = styled.div`
   z-index: 1;
@@ -22,10 +27,19 @@ const Main = styled.div`
 `;
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleSide = () => {
+    setIsOpen(true);
+  };
   return (
     <Main>
       <div>👩‍💻 Dev Heejin</div>
-      <div>햄버거</div>
+      <div>
+        <button onClick={toggleSide}>
+          <RxHamburgerMenu size="20px" />
+        </button>
+        <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
+      </div>
     </Main>
   );
 }

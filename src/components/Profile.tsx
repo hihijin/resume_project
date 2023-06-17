@@ -1,12 +1,12 @@
-import '../App.css';
+import "../App.css";
 
-import { useState } from 'react';
+import { useState } from "react";
 
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
-import picture from '../assets/picture.png';
-import Mail from './Mail';
+import picture from "../assets/picture.png";
+import Mail from "./Mail";
 
 const Main = styled.div`
   width: 100%;
@@ -60,7 +60,7 @@ const Section2 = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (max-width: 565px) {
+  @media (max-width: 585px) {
     flex-direction: column;
   }
   .picture {
@@ -113,7 +113,7 @@ const Info = styled.div`
     width: 100px;
     margin-bottom: 10px;
     @media (max-width: 651px) {
-      width: 70px;
+      width: 85px;
     }
   }
   .Language {
@@ -140,6 +140,20 @@ const Answer = styled.div`
   }
 `;
 
+const Section5 = styled.div`
+  margin: 5px 0;
+  span {
+    display: inline;
+  }
+  .subject {
+    margin-right: 10px;
+  }
+  .text {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+`;
+
 function Profile() {
   const [mailShow, setMailShow] = useState(false);
   const mailShowHander = () => {
@@ -151,7 +165,7 @@ function Profile() {
         <span>
           <span className="name">박희진(Heejin Park)</span>
         </span>
-        <span className="time">Last updated 2023.06.13</span>
+        <span className="time">Last updated 2023.06.17</span>
       </Section1>
       <Section2>
         <div>
@@ -164,6 +178,7 @@ function Profile() {
               <span>Phone</span>
               <span>Email</span>
               <span>Github</span>
+              <span>Blog</span>
             </Info>
             <Answer>
               <Link to="tel:010-2470-7057" style={{ textDecoration: "none" }}>
@@ -181,6 +196,17 @@ function Profile() {
               >
                 https://github.com/hihijin
               </button>
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://velog.io/@hihijin",
+                    "_blank",
+                    "noreferrer noopener"
+                  )
+                }
+              >
+                https://velog.io/@hihijin
+              </button>
             </Answer>
           </Section4>
           <div className="subject">Skill</div>
@@ -189,16 +215,26 @@ function Profile() {
             <Info>
               <span>Deploy</span>
               <span className="Language">Language</span>
-              <span>Library</span>
+              <span>library</span>
+              <span>Framework</span>
               <span>Tool</span>
             </Info>
             <Answer>
               <span>AWS(S3, Route53, cloundfront), Netlify</span>
-              <span>Typescript, Javascript, Styled-Component</span>
-              <span>React, Redux</span>
+              <span>Typescript, Javascript</span>
+              <span>React</span>
+              <span>Redux, Styled Components</span>
               <span>Git, Github, Figma, Slack</span>
             </Answer>
           </Section4>
+          <Section5>
+            <span className="subject">Education</span>
+            <span className="text">코드스테이츠 (2022.12~2023.06)</span>
+          </Section5>
+          <Section5>
+            <span className="subject">Lisense</span>
+            <span className="text">컴퓨터활용능력 1급 (2022.11)</span>
+          </Section5>
         </Section3>
       </Section2>
       {mailShow && <Mail setMailShow={setMailShow} />}

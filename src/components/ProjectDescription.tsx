@@ -1,9 +1,9 @@
-import '../App.css';
+import "../App.css";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import feedback from '../assets/feedback.png';
-import logo from '../assets/logo.png';
+import feedback from "../assets/feedback.png";
+import logo from "../assets/logo.png";
 
 const Main = styled.div`
   width: 100%;
@@ -43,6 +43,7 @@ const Main = styled.div`
     color: rgba(0, 0, 0, 0.5);
     border: none;
     margin-right: 10px;
+    font-size: 15px;
     &:hover {
       color: #0db4f3;
     }

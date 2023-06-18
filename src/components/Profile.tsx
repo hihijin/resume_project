@@ -10,7 +10,6 @@ import Mail from "./Mail";
 
 const Main = styled.div`
   width: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   padding: 30px 0;
   margin: 30px 0;
 `;
@@ -32,17 +31,18 @@ const Section1 = styled.div`
     font-weight: bold;
     border-left: 10px solid #0db4f3;
     padding-left: 10px;
+    color: rgba(0, 0, 0, 0.8);
     @media (max-width: 550px) {
-      font-size: 30px;
+      font-size: 25px;
       border-left: 7px solid #0db4f3;
     }
     @media (max-width: 310px) {
-      font-size: 25px;
+      font-size: 23px;
       border-left: 5px solid #0db4f3;
     }
   }
   .time {
-    font-size: 13px;
+    font-size: 10px;
     color: rgba(0, 0, 0, 0.5);
     @media (max-width: 550px) {
       font-size: 10px;
@@ -108,8 +108,9 @@ const Info = styled.div`
   align-items: flex-start;
   flex-direction: column;
   span {
+    color: rgba(0, 0, 0, 0.9);
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
     width: 100px;
     margin-bottom: 10px;
     @media (max-width: 651px) {
@@ -129,8 +130,8 @@ const Answer = styled.div`
   flex-direction: column;
   span,
   button {
-    color: rgba(0, 0, 0, 0.6);
-    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 12px;
     margin-bottom: 10px;
   }
   button {
@@ -149,8 +150,8 @@ const Section5 = styled.div`
     margin-right: 10px;
   }
   .text {
-    font-size: 13px;
-    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.7);
   }
 `;
 
@@ -165,7 +166,7 @@ function Profile() {
         <span>
           <span className="name">박희진(Heejin Park)</span>
         </span>
-        <span className="time">Last updated 2023.06.17</span>
+        <span className="time">Last updated 2023.06.18</span>
       </Section1>
       <Section2>
         <div>
@@ -224,16 +225,14 @@ function Profile() {
               <span>Typescript, Javascript</span>
               <span>React</span>
               <span>Redux, Styled Components</span>
-              <span>Git, Github, Figma, Slack</span>
+              <span>Git, Github, Figma, Notion</span>
             </Answer>
           </Section4>
           <Section5>
-            <span className="subject">Education</span>
-            <span className="text">코드스테이츠 (2022.12~2023.06)</span>
-          </Section5>
-          <Section5>
-            <span className="subject">Lisense</span>
-            <span className="text">컴퓨터활용능력 1급 (2022.11)</span>
+            <div className="subject">Education</div>
+            <div className="text">
+              코드스테이츠 웹 프론트엔드 과정 (2022.12~2023.06)
+            </div>
           </Section5>
         </Section3>
       </Section2>

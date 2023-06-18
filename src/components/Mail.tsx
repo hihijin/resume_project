@@ -10,23 +10,21 @@ import ToastAlert from "../util/ToastAlert";
 
 const Main = styled.div`
   position: fixed;
-  bottom: 50px;
+  bottom: 30px;
   left: 30px;
   background: #0db4f3;
   color: white;
   font-size: 15px;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 5px 8px 10px 0px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  animation: 0.5s ease-in-out mailOpen;
   &:hover {
     cursor: pointer;
   }
-  .animation {
-    animation: 1s ease-in-out mailAni;
-  }
-  @keyframes mailAni {
+  @keyframes mailOpen {
     from {
-      transform: translateY(-30px);
+      transform: translateY(500px);
     }
     to {
       transform: translateY(0px);
@@ -47,18 +45,38 @@ const Main = styled.div`
       border-radius: 5px;
       outline: none;
       border: none;
-      width: 200px;
-      height: 100px;
+      width: 400px;
+      height: 200px;
+      @media (max-width: 585px) {
+        width: 300px;
+        height: 150px;
+      }
+      @media (max-width: 480px) {
+        width: 200px;
+        height: 100px;
+      }
     }
     .sendBtn {
-      background: white;
       border-radius: 5px;
       padding: 5px;
       box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
       font-weight: bold;
+      border: 2px solid white;
+      color: white;
       &:hover {
-        background: #ececec;
+        background: rgba(255, 255, 255, 0.2);
       }
+      @media (max-width: 480px) {
+        font-size: 10px;
+      }
+    }
+  }
+  .text {
+    color: white;
+    font-size: 13px;
+    margin-bottom: 10px;
+    @media (max-width: 480px) {
+      font-size: 10px;
     }
   }
 `;
@@ -87,17 +105,31 @@ const Section2 = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 5px;
+  margin-top: 20px;
+  @media (max-width: 480px) {
+    margin-top: 10px;
+  }
+  label {
+    @media (max-width: 480px) {
+      font-size: 12px;
+    }
+  }
   input {
-    width: 150px;
+    width: 340px;
     padding: 5px;
     outline: none;
     border: none;
-    margin-left: 5px;
+    margin-left: 10px;
     border-bottom: 3px solid white;
     background: none;
     &::placeholder {
       color: rgba(255, 255, 255, 0.5);
+    }
+    @media (max-width: 585px) {
+      width: 245px;
+    }
+    @media (max-width: 480px) {
+      width: 150px;
     }
   }
 `;
@@ -136,9 +168,10 @@ export default function Mail(props: Imail) {
         </Section1>
         <Section2>
           <label>Email</label>
-          <input placeholder="email" name="email" />
+          <input placeholder="email" name="email" required />
         </Section2>
-        <textarea name="message" />
+        <textarea name="message" required />
+        <div className="text">*저에게 바로 메일을 보낼 수 있습니다.</div>
         <button className="sendBtn" type="submit" value="Send">
           Send
         </button>

@@ -2,25 +2,26 @@ import "../App.css";
 
 import styled from "styled-components";
 
+import feedback from "../assets/feedback.png";
 import logo from "../assets/logo.png";
 
 const Main = styled.div`
   width: 100%;
-  padding-bottom: 30px;
+  padding: 30px 0;
   margin-bottom: 100px;
   .title {
-    color: #0db4f3;
+    color: rgba(0, 0, 0, 0.8);
     font-weight: bold;
     font-size: 35px;
     margin-bottom: 30px;
+    width: 360px;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
   }
   img {
     width: 150px;
     height: auto;
     margin: 5px 0;
-    &:hover {
-      cursor: pointer;
-    }
   }
   .subTitle {
     font-weight: bold;
@@ -34,27 +35,45 @@ const Main = styled.div`
   .text,
   ul {
     line-height: 200%;
-    color: black;
-    @media (max-width: 740px) {
-      font-size: 13px;
-    }
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 13px;
   }
   .text {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 7px;
-  }
-  .blue {
-    &:hover {
-      cursor: pointer;
-      color: #0db4f3;
-    }
   }
   li {
     margin: 5px 0;
     margin-left: 20px;
+    font-size: 13px;
   }
   .gray {
     color: rgba(0, 0, 0, 0.5);
+    border: none;
+  }
+  .link {
+    color: rgba(0, 0, 0, 0.5);
+    border: none;
+    margin-right: 10px;
+    &:hover {
+      color: #0db4f3;
+    }
+  }
+  .feedback {
+    width: 600px;
+    height: auto;
+    margin-bottom: 100px;
+    @media (max-width: 645px) {
+      width: 500px;
+    }
+    @media (max-width: 535px) {
+      width: 400px;
+    }
+    @media (max-width: 350px) {
+      width: 300px;
+    }
+  }
+  .noborder {
     border: none;
   }
 `;
@@ -67,28 +86,74 @@ function Experience() {
         코드스테이츠 부트캠프 진행 중 저의 성장에 영향을 주었던 프로젝트를
         소개해드리겠습니다.
       </div>
-      <img
-        onClick={() => window.open("https://whatsyourmbti.click", "_blank")}
-        className="logo"
-        src={logo}
-        alt="로고"
-      />
-      <div
-        onClick={() => window.open("https://whatsyourmbti.click", "_blank")}
-        className="text blue"
+      <img className="logo" src={logo} alt="로고" />
+      <div className="subTitle">🔗프로젝트 관련 링크</div>
+      <button
+        className="text link"
+        onClick={() =>
+          window.open(
+            "https://whatsyourmbti.click",
+            "_blank",
+            "noreferrer noopener"
+          )
+        }
       >
-        ✈️MBTI기반 여행지 추천&커뮤니티 어플리케이션
-      </div>
-      <div className="subTitle">팀 프로젝트</div>
-      <div className="text">프론트엔드 개발자 3명, 백엔드 개발자 3명</div>
-      <div className="subTitle">프로젝트 기간</div>
-      <div className="text">2023.04.28 ~ 2023.05.25</div>
-      <div className="subTitle">사용한 기술 스택</div>
+        프로젝트 배포 링크
+      </button>
+      <button
+        onClick={() =>
+          window.open(
+            "https://github.com/codestates-seb/seb43_main_023/tree/main",
+            "_blank",
+            "noreferrer noopener"
+          )
+        }
+        className="text link"
+      >
+        프로젝트 Github 링크
+      </button>
+      <button
+        onClick={() =>
+          window.open(
+            "https://youtu.be/VOqiHb-n1bI",
+            "_blank",
+            "noreferrer noopener"
+          )
+        }
+        className="text link"
+      >
+        프로젝트 발표 링크
+      </button>
+      <button
+        onClick={() =>
+          window.open(
+            "https://velog.io/@hihijin/%EB%A9%94%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0",
+            "_blank",
+            "noreferrer noopener"
+          )
+        }
+        className="text link"
+      >
+        프로젝트 회고 링크
+      </button>
+      <div className="subTitle">🪧프로젝트 설명</div>
       <div className="text">
-        AWS(S3, cloudFront, Route53), React, javascript, typescript, axios,
-        Redux-toolkit, tour api, kakaomap api, styled-component
+        MBTI기반 여행지 추천&커뮤니티 서비스 입니다. <br />
+        최근 한국인의 해외여행 관광비율에 비해 적은 국내여행 관광 비율의 문제를
+        인식하고,
+        <br />
+        국내 유명명소들을 소개하여 국내 관광시장의 활기를 되찾기 위해 MZ세대에서
+        현재 대유행하고 있는 “MBTI”키워드를 접목하여 각 MBTI별 여행지 추천
+        서비스와 함께 여행커뮤니티 서비스를 기획하게 되었습니다.
       </div>
-      <div className="subTitle">구현 기능</div>
+      <div className="subTitle">⚒️기술 스택</div>
+      <div className="text">
+        AWS(EC2, S3, RDS), React, javascript, typescript, axios, Redux-toolkit,
+        styled-component
+      </div>
+      <div className="subTitle">🗣️협업 툴</div>
+      <div className="text">Github, Git, Figma, Notion, Discord</div>
+      <div className="subTitle">💻담당 구현 기능</div>
       <ul>
         <li>프로젝트 아이디어 제안 및 구성(공통)</li>
         <li>UX/UI 디자인 제작(공통)</li>
@@ -100,12 +165,21 @@ function Experience() {
         <li>관리자페이지 구현</li>
         <li>랜딩페이지, 로딩페이지, 에러페이지, 헤더, 푸터 구현</li>
         <li>반응형 레이아웃 구현</li>
-        <li>공통 API함수, util함수, hook 생성</li>
-        <li>redux-tookit으로 로그인유무와 유저정보를 전역상태로 구현</li>
-        <li>Lazy.loading 구현</li>
+        <li>공통 axios요청 함수 모듈화로 코드 중복 개선</li>
+        <li>usememo hook 사용으로 성능 최적화 구현</li>
+        <li>
+          redux-tookit으로 로그인유무와 유저정보를 전역상태로 구현하여 props
+          복잡도 개선
+        </li>
+        <li>React.lazy를 적용하여 코드 분할로 성능 향상</li>
         <li>github 칸반, 마일스톤, 이슈 관리(공통)</li>
         <li>AWS s3, cloudFront, Route53를 활용하여 https로 배포</li>
       </ul>
+      <div className="subTitle">🔥성장 경험</div>
+      <div className="text noborder">
+        해당 프로젝트 종료 후 팀원분들이 작성해주신 피드백과 후기입니다.
+      </div>
+      <img className="feedback" src={feedback} alt="feedback" />
     </Main>
   );
 }

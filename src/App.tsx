@@ -10,7 +10,6 @@ import Header from "./components/Header";
 import Loading from "./pages/Loading";
 
 const MainPage = lazy(() => import("./pages/MainPage"));
-const Project = lazy(() => import("./pages/Project"));
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="/project" element={<Project />} />
         </Routes>
       </Suspense>
       <ChannelTalk />

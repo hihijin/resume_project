@@ -12,7 +12,7 @@ const Main = styled.div`
     margin-bottom: 30px;
     width: 250px;
     padding-bottom: 10px;
-    border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   }
   .section {
     border-left: 5px solid #0db4f3;

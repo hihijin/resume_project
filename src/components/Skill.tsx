@@ -13,7 +13,7 @@ const Main = styled.div`
     margin-bottom: 30px;
     width: 100px;
     padding-bottom: 10px;
-    border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   }
   .subTitle {
     font-weight: bold;

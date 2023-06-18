@@ -16,7 +16,7 @@ const Main = styled.div`
     margin-bottom: 30px;
     width: 360px;
     padding-bottom: 10px;
-    border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   }
   img {
     width: 150px;
@@ -37,9 +37,9 @@ const Main = styled.div`
     line-height: 200%;
     color: rgba(0, 0, 0, 0.9);
     font-size: 13px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
   }
   .text {
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 7px;
   }
   li {
@@ -138,17 +138,21 @@ function Experience() {
       </button>
       <div className="subTitle">🪧프로젝트 설명</div>
       <div className="text">
-        MBTI기반 여행지 추천&커뮤니티 서비스 입니다. <br />
+        MBTI기반 여행지 추천&커뮤니티 서비스 <br />
         최근 한국인의 해외여행 관광비율에 비해 적은 국내여행 관광 비율의 문제를
         인식하고,
         <br />
         국내 유명명소들을 소개하여 국내 관광시장의 활기를 되찾기 위해 MZ세대에서
         현재 대유행하고 있는 “MBTI”키워드를 접목하여 각 MBTI별 여행지 추천
-        서비스와 함께 여행커뮤니티 서비스를 기획하게 되었습니다.
+        서비스와 함께 여행커뮤니티 서비스 기획
+        <br />
+        <br />
+        팀원 - 프론트엔드 개발자 3명, 백엔드 개발자 3명 <br />
+        프로젝트 기간 - 2023.04.28 ~ 2023.05.25 (약 1개월)
       </div>
       <div className="subTitle">⚒️기술 스택</div>
       <div className="text">
-        AWS(EC2, S3, RDS), React, javascript, typescript, axios, Redux-toolkit,
+        AWS, React, javascript, typescript, axios, Redux-toolkit,
         styled-component
       </div>
       <div className="subTitle">🗣️협업 툴</div>

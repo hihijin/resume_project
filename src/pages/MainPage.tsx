@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Experience from "../components/Experience";
 import Introduction from "../components/Introduction";
 import Profile from "../components/Profile";
+import Skill from "../components/Skill";
 
 const Main = styled.div`
   width: 100%;
@@ -38,6 +39,7 @@ function MainPage() {
       <Content>
         <Profile />
         <Introduction />
+        <Skill />
         <Experience />
       </Content>
     </Main>

@@ -16,15 +16,18 @@ const Main = styled.div`
   @media (max-width: 310px) {
     padding: 15px 10px;
   }
-  div {
+  button {
     font-weight: bold;
   }
 `;
 
 function Header() {
+  const scrollHandler = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <Main>
-      <div>👩‍💻 Dev Heejin</div>
+      <button onClick={scrollHandler}>👩‍💻 Dev Heejin</button>
     </Main>
   );
 }

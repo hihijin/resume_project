@@ -2,10 +2,13 @@ import "../App.css";
 
 import styled from "styled-components";
 
+import Blog from "../components/Blog";
+import Education from "../components/Education";
 import Experience from "../components/Experience";
 import Introduction from "../components/Introduction";
 import Profile from "../components/Profile";
 import Skill from "../components/Skill";
+import Study from "../components/Study";
 
 const Main = styled.div`
   width: 100%;
@@ -41,6 +44,9 @@ function MainPage() {
         <Introduction />
         <Skill />
         <Experience />
+        <Blog />
+        <Study />
+        <Education />
       </Content>
     </Main>
   );

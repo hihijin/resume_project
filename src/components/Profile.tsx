@@ -10,8 +10,7 @@ import Mail from "./Mail";
 
 const Main = styled.div`
   width: 100%;
-  padding: 30px 0;
-  margin: 30px 0;
+  margin: 100px 0;
 `;
 
 const Section1 = styled.div`
@@ -223,8 +222,8 @@ function Profile() {
             <Answer>
               <span>AWS(S3, Route53, cloundfront), Netlify</span>
               <span>Typescript, Javascript</span>
-              <span>React</span>
-              <span>Redux, Styled Components</span>
+              <span>React, Styled Components</span>
+              <span>Redux</span>
               <span>Git, Github, Figma, Notion</span>
             </Answer>
           </Section4>

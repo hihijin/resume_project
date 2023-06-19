@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Main = styled.div`
   width: 100%;
-  margin: 100px 50px;
+  margin-bottom: 100px;
   .title {
     color: rgba(0, 0, 0, 0.8);
     font-weight: bold;

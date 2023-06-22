@@ -1,13 +1,13 @@
-import "../App.css";
+import '../App.css';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import feedback from "../assets/feedback.png";
-import logo from "../assets/logo.png";
-import mbti1 from "../assets/mbti1.png";
-import mbti2 from "../assets/mbti2.png";
-import mbti3 from "../assets/mbti3.png";
-import mbti4 from "../assets/mbti4.png";
+import feedback from '../assets/feedback.png';
+import logo from '../assets/logo.png';
+import mbti1 from '../assets/mbti1.png';
+import mbti2 from '../assets/mbti2.png';
+import mbti3 from '../assets/mbti3.png';
+import mbti4 from '../assets/mbti4.png';
 
 const Main = styled.div`
   width: 100%;
@@ -17,9 +17,9 @@ const Main = styled.div`
     font-weight: bold;
     font-size: 35px;
     margin-bottom: 30px;
-    width: 360px;
+    width: 170px;
     padding-bottom: 10px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   }
   img {
     width: 150px;
@@ -113,12 +113,30 @@ const ImgBox = styled.div`
 function Experience() {
   return (
     <Main>
-      <div className="title">Project Experience</div>
-      <div className="text gray">
-        코드스테이츠 부트캠프 진행 중 저의 성장에 영향을 주었던 프로젝트를
-        소개해드리겠습니다.
-      </div>
+      <div className="title">Project</div>
+      <div className="subTitle">🪧프로젝트 설명</div>
       <img className="logo" src={logo} alt="로고" />
+      <div className="text">
+        <span className="blue">
+          [너의 MBTI는] : MBTI기반 여행지 추천&커뮤니티 서비스
+        </span>{" "}
+        <br />
+        최근 한국인의 해외여행 관광비율에 비해 적은 국내여행 관광 비율의 문제를
+        인식하고,
+        <br />
+        국내 유명명소들을 소개하여 국내 관광시장의 활기를 되찾기 위해 MZ세대에서
+        현재 대유행하고 있는 <span className="blue">MBTI</span>키워드를 접목하여
+        각 MBTI별 여행지 추천 서비스와 함께 여행커뮤니티 서비스 기획
+        <br />
+        <br />
+        팀원 -{" "}
+        <span className="blue">
+          프론트엔드 개발자 3명, 백엔드 개발자 3명
+        </span>{" "}
+        <br />
+        프로젝트 기간 -{" "}
+        <span className="blue">2023.04.28 ~ 2023.05.25 (약 1개월)</span>
+      </div>
       <div className="subTitle">🔗프로젝트 관련 링크</div>
       <button
         className="text link"
@@ -174,26 +192,6 @@ function Experience() {
         <img src={mbti3} alt="구현화면" />
         <img src={mbti4} alt="구현화면" />
       </ImgBox>
-      <div className="subTitle">🪧프로젝트 설명</div>
-      <div className="text">
-        <span className="blue">MBTI기반 여행지 추천&커뮤니티 서비스</span>{" "}
-        <br />
-        최근 한국인의 해외여행 관광비율에 비해 적은 국내여행 관광 비율의 문제를
-        인식하고,
-        <br />
-        국내 유명명소들을 소개하여 국내 관광시장의 활기를 되찾기 위해 MZ세대에서
-        현재 대유행하고 있는 <span className="blue">MBTI</span>키워드를 접목하여
-        각 MBTI별 여행지 추천 서비스와 함께 여행커뮤니티 서비스 기획
-        <br />
-        <br />
-        팀원 -{" "}
-        <span className="blue">
-          프론트엔드 개발자 3명, 백엔드 개발자 3명
-        </span>{" "}
-        <br />
-        프로젝트 기간 -{" "}
-        <span className="blue">2023.04.28 ~ 2023.05.25 (약 1개월)</span>
-      </div>
       <div className="subTitle">⚒️기술 스택</div>
       <div className="text">
         AWS, React, javascript, typescript, axios, Redux-toolkit,
@@ -242,21 +240,6 @@ function Experience() {
         <span className="blue">코드의 가독성과 유연성</span>을 향상시키며,
         전체적인 프로젝트의 <span className="blue">효율성</span>을 높이는 데
         기여했습니다.
-      </div>
-      <div className="subTitle">👩‍💻Problem</div>
-      <div className="text">
-        프로젝트에서 HTTP로 배포된 사이트를 oauth로 인해 급하게{" "}
-        <span className="blue">HTTPS</span>로 변경해야 하는{" "}
-        <span className="blue">문제</span>가 있었습니다.
-        <br />
-        원래 배포 담당 팀원의 도움요청으로 제가 마감 3일 전에 새롭게 HTTPS
-        배포를 완료 후 Mixed Content 오류가 발생하였지만, Backend 팀원과
-        협력하여 마감 2일 전 서버까지 HTTPS 배포로 오류를 해결하면서 일정을
-        준수하였습니다. <br />이 경험을 통해 앞으로의 프로젝트에서는 배포 일정을
-        미리 계획하고 여유롭게 설정하며,{" "}
-        <span className="blue">문제 해결에 적극적인 자세</span>를 가지고{" "}
-        <span className="blue"> 팀원들과 협력</span>하여 효과적인 프로젝트
-        진행에 기여하고자 합니다.
       </div>
       <div className="text noborder">
         *해당 프로젝트 종료 후 팀원분들이 작성해주신 피드백과 후기입니다.*

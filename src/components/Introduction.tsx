@@ -1,6 +1,6 @@
-import "../App.css";
+import '../App.css';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Main = styled.div`
   width: 100%;
@@ -10,9 +10,9 @@ const Main = styled.div`
     font-weight: bold;
     font-size: 35px;
     margin-bottom: 30px;
-    width: 250px;
+    width: 240px;
     padding-bottom: 10px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   }
   .section {
     border-left: 5px solid #0db4f3;

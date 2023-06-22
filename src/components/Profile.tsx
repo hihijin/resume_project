@@ -1,12 +1,12 @@
-import "../App.css";
+import '../App.css';
 
-import { useState } from "react";
+import { useState } from 'react';
 
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
-import picture from "../assets/picture.png";
-import Mail from "./Mail";
+import picture from '../assets/picture.png';
+import Mail from './Mail';
 
 const Main = styled.div`
   width: 100%;
@@ -165,7 +165,7 @@ function Profile() {
         <span>
           <span className="name">박희진(Heejin Park)</span>
         </span>
-        <span className="time">Last updated 2023.06.18</span>
+        <span className="time">Last updated 2023.06.22</span>
       </Section1>
       <Section2>
         <div>
@@ -220,11 +220,11 @@ function Profile() {
               <span>Tool</span>
             </Info>
             <Answer>
-              <span>AWS(S3, Route53, cloundfront), Netlify</span>
+              <span>AWS(S3, Route53, cloundfront)</span>
               <span>Typescript, Javascript</span>
               <span>React, Styled Components</span>
               <span>Redux</span>
-              <span>Git, Github, Figma, Notion</span>
+              <span>Git, Github, Figma, Notion, Slack</span>
             </Answer>
           </Section4>
           <Section5>
